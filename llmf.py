@@ -20,6 +20,7 @@ URL = "https://llmf-bot.herokuapp.com"
 #URL = "https://893e4c2528a1.ngrok.io"
 #URL = "https://bb61b29222fa.ngrok.io"
 
+__name__ = llmf
 
 app = Flask(__name__)
 
