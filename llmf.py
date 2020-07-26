@@ -15,10 +15,10 @@ global bot
 global TOKEN
 TOKEN = "1340265163:AAFcWrGSFvksnifXziCxYT9sGVjRbuMEwfI"
 bot = telegram.Bot(token=TOKEN)
-#URL = "https://tel-bot-llmf.herokuapp.com/"
+URL = "https://llmf-bot.herokuapp.com"
 #URL = "http://localhost:5000"
 #URL = "https://893e4c2528a1.ngrok.io"
-URL = "https://bb61b29222fa.ngrok.io"
+#URL = "https://bb61b29222fa.ngrok.io"
 
 
 app = Flask(__name__)
