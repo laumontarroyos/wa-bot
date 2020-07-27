@@ -1,4 +1,4 @@
-gunicorn
+uwsgi
 astroid==2.4.2
 certifi==2020.6.20
 cffi==1.14.0
@@ -17,13 +17,11 @@ mccabe==0.6.1
 pycparser==2.20
 PyJWT==1.7.1
 pylint==2.5.3
-python-telegram-bot==12.8
 pytz==2020.1
 requests==2.24.0
 six==1.15.0
 toml==0.10.1
 tornado==6.0.4
-twilio==6.44.0
 typed-ast==1.4.1
 urllib3==1.25.9
 Werkzeug==1.0.1

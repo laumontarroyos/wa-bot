@@ -1,1 +1,1 @@
-web: gunicorn llmf:app
+web: uwsgi uwsgi.ini
