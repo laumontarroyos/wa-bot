@@ -40,7 +40,7 @@ app = Flask(__name__)
 @app.route('/{}'.format(TOKEN), methods=['POST'])
 def respond():
     
-    update = telegram.Update.de_json(data= request.get_json(force=True), bot1)
+    update = telegram.Update.de_json(request.get_json(force=True), bot1)
     print('I am still alive.')
     # retrieve the message in JSON and then transform it to Telegram object
     #update = telegram.Update.de_json(request.get_json(force=True), bot)
