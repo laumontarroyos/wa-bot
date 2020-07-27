@@ -9,13 +9,17 @@ import telegram
 #from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 # Enable logging
-#logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    level=logging.DEBUG)
 #                    level=logging.INFO)
+#logger = logging.getLogger(__name__)
 
 #logger = logging.getLogger(__name__)
+#
 # https://api.telegram.org/bot1340265163:AAFcWrGSFvksnifXziCxYT9sGVjRbuMEwfI/setWebhook?
 # url=https://llmf-bot.herokuapp.com
 # {"ok":true,"result":true,"description":"Webhook was set"}
+
 #$path = "https://api.telegram.org/bot<yourtoken>
 #Since we’ll be receiving updates by means of the webhook, let’s create and populate an array
 #  with that update data: $update = json_decode(file_get_contents("php://input"), TRUE)
