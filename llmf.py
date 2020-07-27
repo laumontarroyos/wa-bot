@@ -10,6 +10,19 @@ import telegram
 #                    level=logging.INFO)
 
 #logger = logging.getLogger(__name__)
+# https://api.telegram.org/bot1340265163:AAFcWrGSFvksnifXziCxYT9sGVjRbuMEwfI/setWebhook?
+# url=https://llmf-bot.herokuapp.com
+# {"ok":true,"result":true,"description":"Webhook was set"}
+#$path = "https://api.telegram.org/bot<yourtoken>
+#Since we’ll be receiving updates by means of the webhook, let’s create and populate an array
+#  with that update data: $update = json_decode(file_get_contents("php://input"), TRUE)
+
+#Now, for the sake of convenience later on, let’s extract two crucial pieces of data from 
+# that update — the chat ID and message (if the update is not caused by a new message, this 
+# field might be empty, and we’ll code for that later):
+#$chatId = $update["message"]["chat"]["id"];
+#$message = $update["message"]["text"];
+
 
 global bot
 global TOKEN
@@ -22,13 +35,6 @@ URL = "https://llmf-bot.herokuapp.com"
 
 app = Flask(__name__)
 
-@app.route("/", methods=['GET','POST'])
-def hello():
-    return "Hello World!"
-
-@app.route('/llmf', methods=['POST'])
-def llmf():
-    return "Laureano..."
 
 @app.route('/{}'.format(TOKEN), methods=['POST'])
 def respond():
@@ -60,6 +66,16 @@ def set_webhook():
         return "webhook setup ok"
     else:
         return "webhook setup failed"   
+
+@app.route("/", methods=['GET'])
+def hello():
+    return "Hello World!"
+
+@app.route('/llmf', methods=['POST'])
+def llmf():
+    return "Laureano..."
+
+
 
 if __name__ == "__main__":
     app.run(host="localhost", port=8443, debug=True)
